@@ -1,4 +1,4 @@
-<main *ngIf="college&&translations">
+<main *ngIf="college$ | async as college">
     <section class="content-menu">
             <div class="info-header">
                 <div class="logo-block" *ngIf="college.photo">
@@ -9,16 +9,16 @@
             <nav>
                 <ul class="no-wrap">
                     <li>
-                        <a [routerLink]="['/about']" class="active">{{ translations["About"] }}</a>
+                        <a [routerLink]="['/about']" class="active">{{ 'COLLEGE.ABOUT' | translate }}</a>
                     </li>
                     <li>
-                        <a [routerLink]="['/courses']">{{ translations["Courses"] }}</a>
+                        <a [routerLink]="['/courses']">{{ 'COLLEGE.COURSES' | translate }}</a>
                     </li>
                     <li>
-                        <a [routerLink]="['/teachers']">{{ translations["Teachers"] }}</a>
+                        <a [routerLink]="['/teachers']">{{ 'COLLEGE.TEACHERS' | translate }}</a>
                     </li>
                     <li>
-                        <a [routerLink]="['/contacts']">{{ translations["Contacts"] }}</a>
+                        <a [routerLink]="['/contacts']">{{ 'COLLEGE.CONTACTS' | translate }}</a>
                     </li>
                 </ul>
             </nav>

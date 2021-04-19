@@ -1,7 +1,9 @@
 {
-    "Loader message": "french loader message",
-    "About": "french about",
-    "Courses": "french courses",
-    "Teachers": "french teachers",
-    "Contacts": "french contacts"        
+    "COLLEGE": {
+        "LOADER MESSAGE": "french loader message",
+        "ABOUT": "french about",
+        "COURSES": "french courses",
+        "TEACHERS": "french teachers",
+        "CONTACTS": "french contacts"       
+    }
 }

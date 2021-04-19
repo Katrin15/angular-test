@@ -1,7 +1,9 @@
 {
-    "Loader message": "טעינה....",
-    "About": "מידע",
-    "Courses": "קורסים",
-    "Teachers": "מורים",
-    "Contacts": "אנשי קשר"    
+    "COLLEGE": {
+        "LOADER MESSAGE": "טעינה....",
+        "ABOUT": "מידע",
+        "COURSES": "קורסים",
+        "TEACHERS": "מורים",
+        "CONTACTS": "אנשי קשר"    
+    }
 }

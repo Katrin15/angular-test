@@ -16,24 +16,14 @@ import { TranslateService } from '@ngx-translate/core';
 export class CollegeComponent implements OnInit {
     college?: AboutInterface;
     translations?: Object;
-    defaultTranslations = default_college_translations;
+    //defaultTranslations = default_college_translations;
 
     constructor( @Inject(COLLEGE_ABOUT$) readonly college$: Observable<AboutInterface>, private translateService: TranslateService ) {
         translateService.addLangs(['en', 'fr', 'he']);
-        this.translateService.getTranslation("fr").subscribe( 
-        res => { this.translations = Object.assign({}, res); },
-        err => { this.translations = Object.assign({}, this.defaultTranslations); });
+        translateService.setDefaultLang('he');
+        translateService.use('fr');
     }
 
     ngOnInit() {
-        this.getCollege();
-    }
-
-    getCollege(): void {
-        this.college$.subscribe(college => {
-            this.college = college;
-            setTimeout(() => {
-            }, 100);
-        });
     }
 }

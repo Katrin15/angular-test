@@ -1,7 +1,9 @@
 {
-    "Loader message": "english loader message",
-    "About": "english about",
-    "Courses": "english courses",
-    "Teachers": "english teachers",
-    "Contacts": "english contacts"    
+    "COLLEGE": {
+        "LOADER MESSAGE": "english loader message",
+        "ABOUT": "english about",
+        "COURSES": "english courses",
+        "TEACHERS": "english teachers",
+        "CONTACTS": "english contacts"
+    } 
 }
