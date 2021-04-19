@@ -4,6 +4,8 @@ import { Routes, RouterModule } from "@angular/router";
 import { CollegeComponent } from "./college/college.component";
 import { CollegeAboutComponent } from "./college-about/college-about.component";
 import { CollegeCoursesComponent } from "./college-courses/college-courses.component";
+import { CollegeTeachersComponent } from "./college-teachers/college-teachers.component";
+import { CollegeContactsComponent } from "./college-contacts/college-contacts.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 
 const routes: Routes = [
@@ -19,18 +21,26 @@ const routes: Routes = [
     path: "courses",
     component: CollegeCoursesComponent,
   },
-  { 
-    path: "notfound", 
-    component: PageNotFoundComponent 
+  {
+    path: "teachers",
+    component: CollegeTeachersComponent,
+  },
+  {
+    path: "contacts",
+    component: CollegeContactsComponent,
   },
   { 
     path: "**", 
-    redirectTo: "/notfound" 
+    component: PageNotFoundComponent
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forChild(routes)
+  ],
+  exports: [
+    RouterModule
+  ]
 })
 export class AboutRoutingModule {}
