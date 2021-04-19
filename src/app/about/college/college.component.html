@@ -1,0 +1,31 @@
+<main *ngIf="college&&translations">
+    <section class="content-menu">
+            <div class="info-header">
+                <div class="logo-block" *ngIf="college.photo">
+                    <img [src]="college.photo" alt=""/>
+                </div>
+                <h1>{{ college.name }}</h1>
+            </div>
+            <nav>
+                <ul class="no-wrap">
+                    <li>
+                        <a [routerLink]="['/about']" class="active">{{ translations["About"] }}</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/courses']">{{ translations["Courses"] }}</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/teachers']">{{ translations["Teachers"] }}</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/contacts']">{{ translations["Contacts"] }}</a>
+                    </li>
+                </ul>
+            </nav>
+    </section>
+    <section class="information">
+        <div class="description">
+            <div [innerHTML]="college.about" class="college-description"></div>
+        </div>
+    </section>
+</main>
